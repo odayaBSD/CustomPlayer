@@ -2,3 +2,38 @@
 
 html, body { height: 100%; }
 body { margin: 0; font-family: Roboto, "Helvetica Neue", sans-serif; }
+
+.mat-slider-horizontal {
+    width: 100%;
+}
+
+.mat-slider-horizontal .mat-slider-wrapper {
+    background-color: #ffffff4a;
+}
+
+.mat-slider-horizontal .mat-slider-wrapper,
+.mat-slider-horizontal .mat-slider-track-wrapper,
+.mat-slider-horizontal .mat-slider-track-background,
+.mat-slider-horizontal .mat-slider-track-fill,
+.mat-slider-horizontal .mat-slider-ticks-container,
+.mat-slider-horizontal .mat-slider-ticks {
+    height: 4px !important;
+}
+
+.mat-slider-min-value:not(.mat-slider-thumb-label-showing) .mat-slider-thumb {
+    border-color: rgb(255 255 255 / 26%) !important;
+    background-color: white !important;
+}
+
+.mat-slider-thumb {
+    border: solid 3px #101010 !important;
+}
+
+.mat-slider-disabled:hover .mat-slider-track-background,
+.mat-slider:hover .mat-slider-track-background {
+    background-color: rgb(0 0 0 / 8%);
+}
+
+/* .mat-slider-disabled .mat-slider-track-fill {
+    background-color: #2196f3;
+} */

@@ -1,0 +1,39 @@
+.wrap-player-actions {
+    display: flex;
+    height: 100%;
+    text-align: center;
+    align-items: center;
+    direction: rtl;
+}
+
+.wrap-actions button:first-of-type,
+.wrap-actions button:last-of-type {
+    margin: 0 85px;
+}
+
+.wrap-actions button {
+    transform: scale(1.15);
+    margin: 5px;
+}
+
+.wrapper {
+    margin: auto;
+    width: fit-content;
+}
+
+.wrap-slider {
+    min-width: 35vw;
+    display: flex;
+    align-items: center;
+    font-family: fb Joker;
+    font-size: 21px;
+    font-weight: 100;
+}
+
+.wrap-slider span {
+    margin: 0 5px;
+}
+
+.active mat-icon {
+    color: #2196f3;
+}

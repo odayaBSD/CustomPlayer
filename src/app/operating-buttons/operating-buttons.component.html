@@ -1,0 +1,36 @@
+<div class="wrap-player-actions">
+    <div class="wrapper">
+        <div class="wrap-actions">
+            <button mat-icon-button><mat-icon>shuffle</mat-icon></button>
+            <!--  [class.active]="activeShuffle" (click)="activeShuffle=!activeShuffle" -->
+            <button mat-icon-button><mat-icon>skip_next</mat-icon></button>
+            <!--  (click)="playNextSong()" -->
+            <button mat-icon-button><mat-icon>fast_forward</mat-icon></button>
+            <!--  (mousedown)="startClick($event)" (mouseup)="endClick($event)" -->
+            <button mat-icon-button><mat-icon>forward_10</mat-icon></button>
+            <!--  (click)="forward(10)" -->
+            <button mat-mini-fab><mat-icon>play_arrow</mat-icon></button>
+            <!--  *ngIf="activeSong!=null&&!isPlaying" (click)="playSong()" -->
+            <button mat-mini-fab style="display: none;"><mat-icon>pause</mat-icon></button>
+            <!--  *ngIf="activeSong!=null&&isPlaying" (click)="player.pause()" -->
+            <button mat-icon-button><mat-icon>replay_10</mat-icon></button>
+            <!--  (click)="rewind(10)" -->
+            <button mat-icon-button><mat-icon>fast_rewind</mat-icon></button>
+            <!--  (mousedown)="startClick($event)" (mouseup)="endClick($event)" -->
+            <button mat-icon-button><mat-icon>skip_previous</mat-icon></button>
+            <!--  (click)="playPreviousSong()" -->
+            <button mat-icon-button><mat-icon>repeat</mat-icon></button>
+            <!--  [class.active]="activeRepeat" (click)="activeRepeat=!activeRepeat" -->
+            <audio #player preload="metadata" style="display: none;"></audio>
+            <!--  (timeupdate)="onTimeUpdate()" (pause)="onPause()" (ended)="onEnded()" -->
+        </div>
+        <div class="wrap-slider">
+            <span>04:30</span>
+            <!-- <span>{{durationTime}}</span> -->
+            <mat-slider min="0" max="430" step="1" value="20"></mat-slider>
+            <!-- <mat-slider min="0" [max]="getDuration()" step="1" [value]="currentState" (input)="onInputChange($event)"></mat-slider> -->
+            <span>00:20</span>
+            <!-- <span>{{ currentTime$ | async }}</span> -->
+        </div>
+    </div>
+</div>
