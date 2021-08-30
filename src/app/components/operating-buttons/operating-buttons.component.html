@@ -2,34 +2,20 @@
     <div class="wrapper">
         <div class="wrap-actions">
             <button mat-icon-button [class.active]="activeShuffle" (click)="playShuffle()"><mat-icon>shuffle</mat-icon></button>
-            <!--  -->
             <button mat-icon-button (click)="playNextSong()"><mat-icon>skip_next</mat-icon></button>
-            <!--  -->
             <button mat-icon-button (mousedown)="startClick($event)" (mouseup)="endClick($event)"><mat-icon>fast_forward</mat-icon></button>
-            <!--  -->
             <button mat-icon-button (click)="forward(10)"><mat-icon>forward_10</mat-icon></button>
-            <!--  -->
             <button mat-mini-fab *ngIf="activeSong!=null&&!isPlaying" (click)="playSong()"><mat-icon>play_arrow</mat-icon></button>
-            <!--  -->
             <button mat-mini-fab *ngIf="activeSong!=null&&isPlaying" (click)="player.pause()"><mat-icon>pause</mat-icon></button>
-            <!--  -->
             <button mat-icon-button (click)="rewind(10)"><mat-icon>replay_10</mat-icon></button>
-            <!--  -->
             <button mat-icon-button (mousedown)="startClick($event)" (mouseup)="endClick($event)"><mat-icon>fast_rewind</mat-icon></button>
-            <!--  -->
             <button mat-icon-button (click)="playPreviousSong()"><mat-icon>skip_previous</mat-icon></button>
-            <!--  -->
             <button mat-icon-button [class.active]="activeRepeat" (click)="activeRepeat=!activeRepeat"><mat-icon>repeat</mat-icon></button>
-            <!--  -->
             <audio #player preload="metadata" (timeupdate)="onTimeUpdate()" (pause)="onPause()" (ended)="onEnded()" style="display: none;"></audio>
-            <!--  -->
         </div>
         <div class="wrap-slider">
-            <!-- <span>04:30</span> -->
             <span>{{durationTime}}</span>
-            <!-- <mat-slider min="0" max="430" step="1" value="20"></mat-slider> -->
             <mat-slider min="0" [max]="getDuration()" step="1" [value]="currentState" (input)="onInputChange($event)"></mat-slider>
-            <!-- <span>00:20</span> -->
             <span>{{ currentTime$ | async }}</span>
         </div>
     </div>
